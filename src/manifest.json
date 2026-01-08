@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "version": "0.1",
+  "name": "template",
+  "background": { "service_worker": "background/index.js", "type": "module"},
+  "action": {"default_popup": "popup/popup.html"},
+  "content_scripts": [
+    {"matches": ["https://*/*", "http://*/*"], "js": ["content/first.js"]}
+  ],
+  "permissions": ["debugger", "tabs"]
+
+}

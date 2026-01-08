@@ -1,0 +1,36 @@
+{
+  "name": "template",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
+  },
+  "scripts": {
+    "clean": "npx --yes rimraf dist",
+    "build": "node build.js",
+    "start": "node dist/index.js",
+    "test": "node --test",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "@craftamap/esbuild-plugin-html": "^0.9.0",
+    "@types/chrome": "^0.1.32",
+    "esbuild": "0.27.2"
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "react": "^19.2.3",
+    "typescript": "^5.9.3"
+  }
+}
